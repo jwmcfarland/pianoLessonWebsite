@@ -28,6 +28,30 @@ body, html {
   padding: 16px;
 }
 
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 </style>
 </head>
 <body>
@@ -101,6 +125,21 @@ body, html {
     <div class="w3-col-s2">
       <p>last column</p>
     </div>
+
+    <div class="row">
+  <div class="column left" style="background-color:#aaa;">
+    <h2>Column 1</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column middle" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+  <div class="column right" style="background-color:#ccc;">
+    <h2>Column 3</h2>
+    <p>Some text..</p>
+  </div>
+</div>
 
   <div class="w3-half">
   <p class="w3-center w3-xxxlarge">Experience & Testimonals</p>
