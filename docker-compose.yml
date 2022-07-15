@@ -1,10 +1,8 @@
 version: "3"
 
 services:
-    name: staticWebsite
     client:
         image: nginx
-        name: staticWebsite
         ports:
             - 5454:80
         volumes:
